@@ -1,0 +1,161 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Enhanced color palette - more vibrant and eye-catching */
+  --background: oklch(0.98 0.03 330); /* Slightly more saturated pink background */
+  --foreground: oklch(0.55 0.18 340); /* More vibrant pink foreground */
+  --card: oklch(0.96 0.05 330); /* More saturated light pink */
+  --card-foreground: oklch(0.55 0.18 340); /* Vibrant pink foreground */
+  --popover: oklch(0.98 0.03 330); /* Enhanced pink tint */
+  --popover-foreground: oklch(0.55 0.18 340); /* Vibrant pink foreground */
+  /* Darkened primary color for better contrast accessibility */
+  --primary: oklch(0.45 0.25 350); /* Much darker baby marshmallow pink for better contrast */
+  --primary-foreground: oklch(0.95 0.03 330); /* Light background for contrast */
+  --price-color: oklch(0.2 0.25 340); /* Rich, deep pink for prices */
+  --secondary: oklch(0.5 0.35 280); /* Much bolder violet - increased saturation */
+  --secondary-foreground: oklch(0.95 0.03 330); /* Light pink */
+  --muted: oklch(0.94 0.06 330); /* More saturated muted pink */
+  --muted-foreground: oklch(0.55 0.18 340); /* Vibrant pink foreground */
+  --accent: oklch(0.7 0.2 220); /* Much more vibrant misty blue */
+  --accent-foreground: oklch(0.25 0.08 340); /* Deep pink contrast */
+  --destructive: oklch(0.55 0.25 25); /* Red for errors */
+  --destructive-foreground: oklch(1 0 0); /* White */
+  --border: oklch(0.88 0.08 330); /* More visible pink border */
+  --input: oklch(0.97 0.04 330); /* Slightly more saturated input */
+  /* Updated ring color to match new primary */
+  --ring: oklch(0.45 0.25 350 / 0.6); /* Updated ring to match new primary */
+  /* Updated chart colors to use new primary */
+  --chart-1: oklch(0.45 0.25 350);
+  --chart-2: oklch(0.5 0.35 280);
+  --chart-3: oklch(0.7 0.2 220);
+  --chart-4: oklch(0.94 0.06 330);
+  --chart-5: oklch(0.55 0.18 340);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.96 0.05 330);
+  --sidebar-foreground: oklch(0.55 0.18 340);
+  /* Updated sidebar primary to match new primary */
+  --sidebar-primary: oklch(0.45 0.25 350);
+  --sidebar-primary-foreground: oklch(0.95 0.03 330);
+  --sidebar-accent: oklch(0.7 0.2 220);
+  --sidebar-accent-foreground: oklch(0.25 0.08 340);
+  --sidebar-border: oklch(0.88 0.08 330);
+  /* Updated sidebar ring to match new primary */
+  --sidebar-ring: oklch(0.45 0.25 350 / 0.6);
+  /* Enhanced marble effect with more vibrant colors and contrast */
+  --marble-effect: linear-gradient(
+    135deg,
+    oklch(0.92 0.08 320) 0%,
+    oklch(0.88 0.12 300) 15%,
+    oklch(0.9 0.1 310) 30%,
+    oklch(0.85 0.15 285) 45%,
+    oklch(0.91 0.09 315) 60%,
+    oklch(0.87 0.13 295) 75%,
+    oklch(0.93 0.07 325) 90%,
+    oklch(0.89 0.11 305) 100%
+  ); /* More vibrant pinky/purple marble with additional stops */
+}
+
+.dark {
+  /* Enhanced dark theme with more vibrant colors */
+  --background: oklch(0.1 0.08 320); /* Deeper, more saturated dark background */
+  --foreground: oklch(0.88 0.08 340); /* Brighter pink */
+  --card: oklch(0.15 0.08 320); /* More saturated dark pink card */
+  --card-foreground: oklch(0.88 0.08 340); /* Brighter pink */
+  --popover: oklch(0.15 0.08 320); /* More saturated dark pink popover */
+  --popover-foreground: oklch(0.88 0.08 340); /* Brighter pink */
+  /* Updated dark mode primary for better contrast */
+  --primary: oklch(0.75 0.2 350); /* Lighter but still vibrant pink for dark mode contrast */
+  --primary-foreground: oklch(0.12 0.08 320); /* Deep dark background */
+  --price-color: oklch(0.85 0.15 340); /* Bright, vibrant pink for dark mode prices */
+  --secondary: oklch(0.42 0.3 280); /* More vibrant darker violet */
+  --secondary-foreground: oklch(0.88 0.08 340); /* Brighter pink */
+  --muted: oklch(0.22 0.08 320); /* More saturated dark muted */
+  --muted-foreground: oklch(0.68 0.12 340); /* More vibrant medium pink */
+  --accent: oklch(0.62 0.18 220); /* Much more vibrant misty blue for dark mode */
+  --accent-foreground: oklch(0.88 0.08 340); /* Brighter pink */
+  --destructive: oklch(0.5 0.2 25); /* Darker red */
+  --destructive-foreground: oklch(0.88 0.08 340); /* Brighter pink */
+  --border: oklch(0.22 0.08 320); /* More saturated dark border */
+  --input: oklch(0.22 0.08 320); /* More saturated dark input */
+  /* Updated dark mode ring to match new primary */
+  --ring: oklch(0.75 0.2 350); /* Updated dark mode ring */
+  /* Updated dark mode chart colors */
+  --chart-1: oklch(0.75 0.2 350);
+  --chart-2: oklch(0.42 0.3 280);
+  --chart-3: oklch(0.62 0.18 220);
+  --chart-4: oklch(0.22 0.08 320);
+  --chart-5: oklch(0.68 0.12 340);
+  --sidebar: oklch(0.18 0.08 320);
+  --sidebar-foreground: oklch(0.88 0.08 340);
+  /* Updated dark mode sidebar primary */
+  --sidebar-primary: oklch(0.75 0.2 350);
+  --sidebar-primary-foreground: oklch(0.12 0.08 320);
+  --sidebar-accent: oklch(0.62 0.18 220);
+  --sidebar-accent-foreground: oklch(0.88 0.08 340);
+  --sidebar-border: oklch(0.22 0.08 320);
+  /* Updated dark mode sidebar ring */
+  --sidebar-ring: oklch(0.75 0.2 350);
+  /* Enhanced dark marble effect with more vibrant colors */
+  --marble-effect: linear-gradient(
+    135deg,
+    oklch(0.12 0.08 320) 0%,
+    oklch(0.08 0.12 300) 15%,
+    oklch(0.1 0.1 310) 30%,
+    oklch(0.06 0.15 285) 45%,
+    oklch(0.11 0.09 315) 60%,
+    oklch(0.07 0.13 295) 75%,
+    oklch(0.13 0.07 325) 90%,
+    oklch(0.09 0.11 305) 100%
+  ); /* More vibrant dark marble with additional stops */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-price: var(--price-color);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    background: var(--background);
+    @apply text-foreground;
+  }
+  .marble-effect {
+    background: var(--marble-effect);
+  }
+}
