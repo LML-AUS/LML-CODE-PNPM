@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Playfair_Display, Source_Sans_3 } from "next/font/google"
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css"
 
 const playfair = Playfair_Display({
@@ -57,6 +58,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${sourceSans.variable} antialiased`}>
       <body className="font-sans">
         <CartProvider>{children}</CartProvider>
+        <Analytics />
       </body>
     </html>
   )
